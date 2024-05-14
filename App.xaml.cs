@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new Ventanas.vPrincipal();
+            MainPage = new NavigationPage (new Ventanas.vPrincipal());
         }
     }
 }

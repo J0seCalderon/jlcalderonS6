@@ -23,4 +23,9 @@ public partial class vPrincipal : ContentPage
 		estud = new ObservableCollection<Estudiante>(mostrarEst);
 		listaEstudiantes.ItemsSource = estud;
 	}
+
+    private void bntAgregar_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PopAsync(new vAgregar());
+    }
 }

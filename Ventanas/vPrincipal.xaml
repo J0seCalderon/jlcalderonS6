@@ -11,25 +11,72 @@
             Text="Consumo de servicio web - GET"
             FontSize="20"
             HorizontalTextAlignment="Center"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="lblcodigo" Text="Codigo" TextColor="Red" Grid.Row="0" Grid.Column="0"/>
+                <Label x:Name="lblNombre" Text="Nombre" TextColor="Red" Grid.Row="0" Grid.Column="1"/>
+                <Label x:Name="lblApellido" Text="Apellido" TextColor="Red" Grid.Row="0" Grid.Column="2"/>
+                <Label x:Name="lblEdad" Text="Edad" TextColor="Red" Grid.Row="0" Grid.Column="3"/>
+            </Grid>
+
             <ListView x:Name="listaEstudiantes">
+                
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout>
-                                <Label Text="Nombre:"/>
-                                <Label x:Name="lblNombre" Text="{Binding nombre}"/>
-                                <Label Text="  "/>
-                                <Label Text="Apellido:"/>
-                                <Label x:Name="lblApellido" Text="{Binding apellido}"/>
-                                <Label Text="  "/>
-                                <Label Text="Edad:"/>
-                                <Label x:Name="lblEdad" Text="{Binding edad}"/>
-                            </StackLayout>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    
+                                    <Label x:Name="lblCodigo" Text="{Binding codigo}"
+                                           Grid.Row="0" Grid.Column="0"/>
+                                
+                                    <Label x:Name="lblNombre" Text="{Binding nombre}"
+                                       Grid.Row="0" Grid.Column="1"/>
+
+                                    <Label x:Name="lblApellido" Text="{Binding apellido}"
+                                       Grid.Row="0" Grid.Column="2"/>
+                                    
+                                    <Label x:Name="lblEdad" Text="{Binding edad}"
+                                       Grid.Row="0" Grid.Column="3"/>
+                                    
+                                </Grid>
+                                
+                                </StackLayout>
+
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
 
             </ListView>
+
+            <Button x:Name="bntAgregar"
+                    Text="Agregar Estudiante"
+                    Clicked="bntAgregar_Clicked"/>
 
         </VerticalStackLayout>
     </ScrollView>
