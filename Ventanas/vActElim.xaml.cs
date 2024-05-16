@@ -5,8 +5,6 @@ using System;
 using System.Net.Http;
 using System.Text;
 
-
-
 namespace jlcalderonS6.Ventanas;
 
 public partial class vActElim : ContentPage

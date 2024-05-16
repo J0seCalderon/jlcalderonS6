@@ -21,17 +21,29 @@
                    Placeholder="Ingrese el apellido"/>
             <Entry x:Name="txtEdad"
                    Placeholder="Ingrese el edad"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <Button x:Name="bntActualizar"
+                        Text="Actualizar"
+                        Clicked="bntActualizar_Clicked"
+                        Grid.Row="0"
+                        Grid.Column="0"/>
+
+                <Button x:Name="bntEliminar"
+                        Text="Eliminar"
+                        Clicked="bntEliminar_Clicked"
+                        Grid.Row="0"
+                        Grid.Column="2"/>
+            </Grid>
             
-            <Button x:Name="bntActualizar"
-                    Text="Actualizar"
-                    Clicked="bntActualizar_Clicked"/>
-            
-            <Button x:Name="bntEliminar"
-                    Text="Eliminar"
-                    Clicked="bntEliminar_Clicked"/>
-
-
-
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
