@@ -1,7 +1,7 @@
 using jlcalderonS6.Tablas;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
-using System.Runtime.CompilerServices;
+//using System.Runtime.CompilerServices;
 
 namespace jlcalderonS6.Ventanas;
 
@@ -24,8 +24,15 @@ public partial class vPrincipal : ContentPage
 		listaEstudiantes.ItemsSource = estud;
 	}
 
+
+    private void listaEstudiantes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+		var objestudiante = (Estudiante)e.SelectedItem;
+		Navigation.PushAsync(new vActElim(objestudiante));
+    }
+
     private void bntAgregar_Clicked(object sender, EventArgs e)
     {
-        Navigation.PopAsync(new vAgregar());
+		Navigation.PushAsync(new vAgregar());
     }
 }
